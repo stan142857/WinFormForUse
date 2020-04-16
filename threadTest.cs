@@ -39,12 +39,12 @@ namespace mingrisoft_3_
             tB33.Text = Math.Pow(a3,b3).ToString();
 
         }
-        public delegate void AddFile();  //定义托管线程
         //设置托管线程
         public void SetAddFile()
         {
             this.Invoke(new AddFile(RunAddFile));//对指定的线程进行托管
         }
+        public delegate void AddFile();  //定义托管线程
         public void RunAddFile()
         {
             int a1 = Convert.ToInt32(tB11.Text.Trim());

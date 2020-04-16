@@ -71,11 +71,6 @@ namespace mingrisoft_3_
                     }
                     try
                     {
-                        tempCount++;
-                        if(tempCount%100==0)
-                        {
-                            LblTips.Text = string.Format("已录入{0}条",tempCount);
-                        }
                         shr.ExeNoQueryProc("Proc_Insert000826", sp);
                         shr.closeConn();
                     }
