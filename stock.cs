@@ -28,7 +28,6 @@ namespace mingrisoft_3_
             {
                 StreamReader sReader = new StreamReader(openFileDialog1.FileName, Encoding.UTF8);
                 string strLine = string.Empty;
-                int tempCount = 0;//计数，已录入
                 while ((strLine = sReader.ReadLine()) != null)
                 {
                     string[] str = strLine.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
@@ -52,18 +51,18 @@ namespace mingrisoft_3_
                     try
                     {
                         sp[0].Value = str[0];
-                        sp[1].Value = str[1];
-                        sp[2].Value = str[2];
-                        sp[3].Value = str[3];
-                        sp[4].Value = str[4];
-                        sp[5].Value = str[5];
-                        sp[6].Value = str[6];
-                        sp[7].Value = str[7];
-                        sp[8].Value = str[8];
-                        sp[9].Value = str[9];
-                        sp[10].Value = str[10];
-                        sp[11].Value = str[11];
-                        sp[12].Value = str[12];
+                        sp[1].Value = str[3];
+                        sp[2].Value = str[4];
+                        sp[3].Value = str[5];
+                        sp[4].Value = str[6];
+                        sp[5].Value = str[7];
+                        sp[6].Value = str[8];
+                        sp[7].Value = str[9];
+                        sp[8].Value = str[10];
+                        sp[9].Value = str[11];
+                        sp[10].Value = str[12];
+                        sp[11].Value = str[13];
+                        sp[12].Value = str[14];
                     }catch(Exception ex)
                     {
                         LblTips.Visible = true;
@@ -96,12 +95,14 @@ namespace mingrisoft_3_
             float[] lows = { 1, 1 };    //最高
             System.Int64[] highs = { 3, 2 }; //最低
             int[] times = { 0, 1, 2, 3, 4, 5 };      //时间
-            CandlePlot cp = new CandlePlot();
-            cp.CloseData = closes;
-            cp.OpenData = opens;
-            cp.LowData = lows;
-            cp.HighData = highs;
-            cp.AbscissaData = times;
+            CandlePlot cp = new CandlePlot
+            {
+                CloseData = closes,
+                OpenData = opens,
+                LowData = lows,
+                HighData = highs,
+                AbscissaData = times
+            };
             plot.Title = "蜡烛图";
             this.plot.Add(cp);
 
@@ -115,8 +116,20 @@ namespace mingrisoft_3_
         //读取数据库数据并用蜡烛图表示
         private void BtnReadDb_Click(object sender, EventArgs e)
         {
-            string sql = "select * from stock_000826 where Id < 50";
+            string sql = "select * from stock_000826 where Id < 500";
             SqlHelper shr = new SqlHelper();
+
+            DataTable dt = shr.Query(sql);
+            CandlePlot cp = new CandlePlot();
+            cp.DataSource = dt;
+            cp.AbscissaData = "Id";
+            cp.OpenData = "openPri";
+            cp.LowData = "lowPri";
+            cp.HighData = "highPri";
+            cp.CloseData = "closePri";
+            cp.Label = "走势图";
+            
+            /*
             SqlDataReader sdr =  shr.QueryOperation(sql);
             ArrayList arrayStart = new ArrayList();
             ArrayList arrayEnd = new ArrayList();
@@ -137,13 +150,15 @@ namespace mingrisoft_3_
             Double[] High = arrayHigh.Cast<object>().Select(t => Convert.ToDouble(t)).ToArray();
             Double[] End = arrayEnd.Cast<object>().Select(t => Convert.ToDouble(t)).ToArray();
             int[] Time = arrayTime.Cast<object>().Select(t => Convert.ToInt32(t)).ToArray();
-            
+
             CandlePlot cp = new CandlePlot();
             cp.CloseData = End;
             cp.OpenData = Start;
             cp.LowData = Low;
             cp.HighData = High;
             cp.AbscissaData = Time;
+            */
+
             plot.Title = "走势图";
             plot.CreateGraphics();
             try

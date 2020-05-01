@@ -50,11 +50,11 @@
             this.plot.DateTimeToolTip = false;
             this.plot.Legend = null;
             this.plot.LegendZOrder = -1;
-            this.plot.Location = new System.Drawing.Point(33, 19);
+            this.plot.Location = new System.Drawing.Point(3, 3);
             this.plot.Name = "plot";
             this.plot.RightMenu = null;
             this.plot.ShowCoordinates = true;
-            this.plot.Size = new System.Drawing.Size(476, 272);
+            this.plot.Size = new System.Drawing.Size(549, 306);
             this.plot.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.None;
             this.plot.TabIndex = 0;
             this.plot.Text = "plotSurface2D1";

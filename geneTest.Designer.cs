@@ -33,11 +33,12 @@
             this.lblinfo = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BtnWpf = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(325, 248);
+            this.listView1.Location = new System.Drawing.Point(12, 246);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(121, 97);
             this.listView1.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // BtnDo
             // 
-            this.BtnDo.Location = new System.Drawing.Point(371, 174);
+            this.BtnDo.Location = new System.Drawing.Point(12, 171);
             this.BtnDo.Name = "BtnDo";
             this.BtnDo.Size = new System.Drawing.Size(124, 23);
             this.BtnDo.TabIndex = 1;
@@ -63,23 +64,34 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 95);
+            this.textBox1.Location = new System.Drawing.Point(12, 81);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 21);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 133);
+            this.textBox2.Location = new System.Drawing.Point(12, 119);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(180, 21);
             this.textBox2.TabIndex = 4;
+            // 
+            // BtnWpf
+            // 
+            this.BtnWpf.Location = new System.Drawing.Point(455, 158);
+            this.BtnWpf.Name = "BtnWpf";
+            this.BtnWpf.Size = new System.Drawing.Size(75, 23);
+            this.BtnWpf.TabIndex = 5;
+            this.BtnWpf.Text = "BtnWpf";
+            this.BtnWpf.UseVisualStyleBackColor = true;
+            this.BtnWpf.Click += new System.EventHandler(this.BtnWpf_Click);
             // 
             // geneTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnWpf);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblinfo);
@@ -100,5 +112,6 @@
         private System.Windows.Forms.Label lblinfo;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button BtnWpf;
     }
 }

@@ -48,6 +48,28 @@ namespace mingrisoft_3_
                 textBox2.Text += p.Name + " ";
             }
         }
+
+        private void BtnWpf_Click(object sender, EventArgs e)
+        {
+            var r = new Random();
+
+            var values = new Dictionary<string, double>();
+
+            values["MX"] = r.Next(0, 100);
+            values["CA"] = r.Next(0, 100);
+            values["US"] = r.Next(0, 100);
+            values["IN"] = r.Next(0, 100);
+            values["CN"] = r.Next(0, 100);
+            values["JP"] = r.Next(0, 100);
+            values["BR"] = r.Next(0, 100);
+            values["DE"] = r.Next(0, 100);
+            values["FR"] = r.Next(0, 100);
+            values["GB"] = r.Next(0, 100);
+
+            var lang = new Dictionary<string, string>();
+            lang["MX"] = "México"; // change the language if necessary
+            
+        }
     }
     #region 定义Person类，使用接口，调用默认规则
     class Person :IComparable<Person>
