@@ -16,7 +16,7 @@ namespace mingrisoft_3_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new stock());
+            Application.Run(new EFUseInfo());
         }
     }
 }

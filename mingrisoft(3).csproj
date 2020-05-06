@@ -66,6 +66,12 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenZhiLunSeven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenZhiLunSeven.Designer.cs">
+      <DependentUpon>BenZhiLunSeven.cs</DependentUpon>
+    </Compile>
     <Compile Include="db_Info.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,6 +154,9 @@
     <Compile Include="ZYF_YH.cs">
       <DependentUpon>db_Info.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EFUseInfo.resx">
+      <DependentUpon>EFUseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
