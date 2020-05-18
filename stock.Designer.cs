@@ -141,6 +141,7 @@
             this.Controls.Add(this.panelPlot);
             this.Controls.Add(this.btnrefesh);
             this.Controls.Add(this.btnIns);
+            this.IsMdiContainer = true;
             this.Name = "stock";
             this.Text = "stock";
             this.Load += new System.EventHandler(this.Stock_Load);

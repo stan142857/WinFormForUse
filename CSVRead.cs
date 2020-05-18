@@ -13,9 +13,9 @@ using NPlot;
 
 namespace mingrisoft_3_
 {
-    public partial class Form1 : Form
+    public partial class CSVRead : Form
     {
-        public Form1()
+        public CSVRead()
         {
             InitializeComponent();
             CodeImage(CheckCode());

@@ -32,6 +32,10 @@ namespace mingrisoft_3_
         {
             var yp = info.ZYF_JG_YP as IQueryable<ZYF_JG_YP>;
             IQueryable<ZYF_JG_YP> ypid = yp.Where(m => m.YPID == "YP00001");
+            using(InfoManageEntities info = new InfoManageEntities())
+            {
+                
+            }
         }
     }
 }

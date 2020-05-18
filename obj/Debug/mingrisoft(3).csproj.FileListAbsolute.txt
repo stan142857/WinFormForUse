@@ -1,7 +1,6 @@
 C:\Users\yuanlei\source\repos\mingrisoft(3)\bin\Debug\mingrisoft(3).exe.config
 C:\Users\yuanlei\source\repos\mingrisoft(3)\bin\Debug\mingrisoft(3).exe
 C:\Users\yuanlei\source\repos\mingrisoft(3)\bin\Debug\mingrisoft(3).pdb
-C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.Form1.resources
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.Properties.Resources.resources
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft(3).csproj.GenerateResource.cache
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft(3).exe
@@ -20,3 +19,6 @@ C:\Users\yuanlei\source\repos\mingrisoft(3)\bin\Debug\EntityFramework.xml
 C:\Users\yuanlei\source\repos\mingrisoft(3)\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\yuanlei\source\repos\mingrisoft(3)\bin\Debug\zh-Hans\EntityFramework.resources.dll
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.EFUseInfo.resources
+C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.BenZhiLunSeven.resources
+C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.CSVRead.resources
+C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.Main.resources

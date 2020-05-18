@@ -220,6 +220,7 @@
             this.Controls.Add(this.BtnCal);
             this.Controls.Add(this.progressBar2);
             this.Controls.Add(this.progressBar1);
+            this.IsMdiContainer = true;
             this.Name = "threadTest";
             this.Text = "threadTest";
             this.Load += new System.EventHandler(this.ThreadTest_Load);

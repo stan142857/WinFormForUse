@@ -70,6 +70,11 @@ namespace mingrisoft_3_
             lang["MX"] = "México"; // change the language if necessary
             
         }
+
+        private void BtnDo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     #region 定义Person类，使用接口，调用默认规则
     class Person :IComparable<Person>

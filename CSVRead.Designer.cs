@@ -1,6 +1,6 @@
 ﻿namespace mingrisoft_3_
 {
-    partial class Form1
+    partial class CSVRead
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -235,7 +235,7 @@
             this.plot3.YAxis1 = null;
             this.plot3.YAxis2 = null;
             // 
-            // Form1
+            // CSVRead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +256,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.IsMdiContainer = true;
+            this.Name = "CSVRead";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

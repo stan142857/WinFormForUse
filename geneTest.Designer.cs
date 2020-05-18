@@ -52,6 +52,7 @@
             this.BtnDo.TabIndex = 1;
             this.BtnDo.Text = "BtnDo";
             this.BtnDo.UseVisualStyleBackColor = true;
+            this.BtnDo.Click += new System.EventHandler(this.BtnDo_Click);
             // 
             // lblinfo
             // 
@@ -97,6 +98,7 @@
             this.Controls.Add(this.lblinfo);
             this.Controls.Add(this.BtnDo);
             this.Controls.Add(this.listView1);
+            this.IsMdiContainer = true;
             this.Name = "geneTest";
             this.Text = "geneTest";
             this.Load += new System.EventHandler(this.geneTest_Load);
