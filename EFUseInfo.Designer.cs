@@ -98,7 +98,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.DGVUSERS);
-            this.IsMdiContainer = true;
             this.Name = "EFUseInfo";
             this.Text = "EFUseInfo";
             this.Load += new System.EventHandler(this.EFUseInfo_Load);

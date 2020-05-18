@@ -98,7 +98,6 @@
             this.Controls.Add(this.lblinfo);
             this.Controls.Add(this.BtnDo);
             this.Controls.Add(this.listView1);
-            this.IsMdiContainer = true;
             this.Name = "geneTest";
             this.Text = "geneTest";
             this.Load += new System.EventHandler(this.geneTest_Load);

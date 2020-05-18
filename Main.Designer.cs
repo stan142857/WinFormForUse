@@ -43,12 +43,12 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.操作ToolStripMenuItem,
-            this.线程测试ToolStripMenuItem,
             this.股票查看ToolStripMenuItem,
+            this.线程测试ToolStripMenuItem,
+            this.fORM1ToolStripMenuItem,
             this.eF使用ToolStripMenuItem,
             this.接口排序泛型ToolStripMenuItem,
-            this.本质论ToolStripMenuItem,
-            this.fORM1ToolStripMenuItem});
+            this.本质论ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 25);
@@ -73,30 +73,35 @@
             this.股票查看ToolStripMenuItem.Name = "股票查看ToolStripMenuItem";
             this.股票查看ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.股票查看ToolStripMenuItem.Text = "股票查看";
+            this.股票查看ToolStripMenuItem.Click += new System.EventHandler(this.股票查看ToolStripMenuItem_Click);
             // 
             // eF使用ToolStripMenuItem
             // 
             this.eF使用ToolStripMenuItem.Name = "eF使用ToolStripMenuItem";
             this.eF使用ToolStripMenuItem.Size = new System.Drawing.Size(57, 21);
             this.eF使用ToolStripMenuItem.Text = "EF使用";
+            this.eF使用ToolStripMenuItem.Click += new System.EventHandler(this.eF使用ToolStripMenuItem_Click);
             // 
             // 接口排序泛型ToolStripMenuItem
             // 
             this.接口排序泛型ToolStripMenuItem.Name = "接口排序泛型ToolStripMenuItem";
             this.接口排序泛型ToolStripMenuItem.Size = new System.Drawing.Size(102, 21);
             this.接口排序泛型ToolStripMenuItem.Text = "接口-排序-泛型";
+            this.接口排序泛型ToolStripMenuItem.Click += new System.EventHandler(this.接口排序泛型ToolStripMenuItem_Click);
             // 
             // 本质论ToolStripMenuItem
             // 
             this.本质论ToolStripMenuItem.Name = "本质论ToolStripMenuItem";
             this.本质论ToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
             this.本质论ToolStripMenuItem.Text = "本质论";
+            this.本质论ToolStripMenuItem.Click += new System.EventHandler(this.本质论ToolStripMenuItem_Click);
             // 
             // fORM1ToolStripMenuItem
             // 
             this.fORM1ToolStripMenuItem.Name = "fORM1ToolStripMenuItem";
             this.fORM1ToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
             this.fORM1ToolStripMenuItem.Text = "CSV操作";
+            this.fORM1ToolStripMenuItem.Click += new System.EventHandler(this.fORM1ToolStripMenuItem_Click);
             // 
             // Main
             // 
