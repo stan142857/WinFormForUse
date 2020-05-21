@@ -33,9 +33,16 @@ namespace mingrisoft_3_
 
         private void eF使用ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EFUseInfo eFUseInfo = new EFUseInfo();
-            eFUseInfo.Show();
-            eFUseInfo.MdiParent = this;
+            try
+            {
+                EFUseInfo eFUseInfo = new EFUseInfo();
+                eFUseInfo.Show();
+                eFUseInfo.MdiParent = this;
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void 接口排序泛型ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +64,20 @@ namespace mingrisoft_3_
             CSVRead cSVRead = new CSVRead();
             cSVRead.Show();
             cSVRead.MdiParent = this;
+        }
+
+        private void 溧水测试ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Neusoft_LiShui_Test neusoft_LiShui_Test = new Neusoft_LiShui_Test();
+            neusoft_LiShui_Test.Show();
+            neusoft_LiShui_Test.MdiParent = this;
+        }
+
+        private void xML文档操作ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XMLOperate xMLOperate = new XMLOperate();
+            xMLOperate.Show();
+            xMLOperate.MdiParent = this;
         }
     }
 }

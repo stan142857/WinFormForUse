@@ -30,12 +30,15 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.线程测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.股票查看ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.线程测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fORM1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eF使用ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.接口排序泛型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.本质论ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fORM1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.溧水测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.xML文档操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +51,9 @@
             this.fORM1ToolStripMenuItem,
             this.eF使用ToolStripMenuItem,
             this.接口排序泛型ToolStripMenuItem,
-            this.本质论ToolStripMenuItem});
+            this.本质论ToolStripMenuItem,
+            this.溧水测试ToolStripMenuItem,
+            this.xML文档操作ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 25);
@@ -61,6 +66,13 @@
             this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.操作ToolStripMenuItem.Text = "操作";
             // 
+            // 股票查看ToolStripMenuItem
+            // 
+            this.股票查看ToolStripMenuItem.Name = "股票查看ToolStripMenuItem";
+            this.股票查看ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.股票查看ToolStripMenuItem.Text = "股票查看";
+            this.股票查看ToolStripMenuItem.Click += new System.EventHandler(this.股票查看ToolStripMenuItem_Click);
+            // 
             // 线程测试ToolStripMenuItem
             // 
             this.线程测试ToolStripMenuItem.Name = "线程测试ToolStripMenuItem";
@@ -68,12 +80,12 @@
             this.线程测试ToolStripMenuItem.Text = "线程测试";
             this.线程测试ToolStripMenuItem.Click += new System.EventHandler(this.线程测试ToolStripMenuItem_Click);
             // 
-            // 股票查看ToolStripMenuItem
+            // fORM1ToolStripMenuItem
             // 
-            this.股票查看ToolStripMenuItem.Name = "股票查看ToolStripMenuItem";
-            this.股票查看ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.股票查看ToolStripMenuItem.Text = "股票查看";
-            this.股票查看ToolStripMenuItem.Click += new System.EventHandler(this.股票查看ToolStripMenuItem_Click);
+            this.fORM1ToolStripMenuItem.Name = "fORM1ToolStripMenuItem";
+            this.fORM1ToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
+            this.fORM1ToolStripMenuItem.Text = "CSV操作";
+            this.fORM1ToolStripMenuItem.Click += new System.EventHandler(this.fORM1ToolStripMenuItem_Click);
             // 
             // eF使用ToolStripMenuItem
             // 
@@ -96,12 +108,27 @@
             this.本质论ToolStripMenuItem.Text = "本质论";
             this.本质论ToolStripMenuItem.Click += new System.EventHandler(this.本质论ToolStripMenuItem_Click);
             // 
-            // fORM1ToolStripMenuItem
+            // 溧水测试ToolStripMenuItem
             // 
-            this.fORM1ToolStripMenuItem.Name = "fORM1ToolStripMenuItem";
-            this.fORM1ToolStripMenuItem.Size = new System.Drawing.Size(67, 21);
-            this.fORM1ToolStripMenuItem.Text = "CSV操作";
-            this.fORM1ToolStripMenuItem.Click += new System.EventHandler(this.fORM1ToolStripMenuItem_Click);
+            this.溧水测试ToolStripMenuItem.Name = "溧水测试ToolStripMenuItem";
+            this.溧水测试ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.溧水测试ToolStripMenuItem.Text = "溧水测试";
+            this.溧水测试ToolStripMenuItem.Click += new System.EventHandler(this.溧水测试ToolStripMenuItem_Click);
+            // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
+            // xML文档操作ToolStripMenuItem
+            // 
+            this.xML文档操作ToolStripMenuItem.Name = "xML文档操作ToolStripMenuItem";
+            this.xML文档操作ToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
+            this.xML文档操作ToolStripMenuItem.Text = "XML文档操作";
+            this.xML文档操作ToolStripMenuItem.Click += new System.EventHandler(this.xML文档操作ToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -130,5 +157,8 @@
         private System.Windows.Forms.ToolStripMenuItem 接口排序泛型ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 本质论ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fORM1ToolStripMenuItem;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
+        private System.Windows.Forms.ToolStripMenuItem 溧水测试ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xML文档操作ToolStripMenuItem;
     }
 }
