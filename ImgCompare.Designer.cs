@@ -78,7 +78,7 @@
             this.TBFloderPath.Name = "TBFloderPath";
             this.TBFloderPath.Size = new System.Drawing.Size(188, 21);
             this.TBFloderPath.TabIndex = 6;
-            this.TBFloderPath.Text = "C:\\Users\\yuanlei\\Desktop\\new";
+            this.TBFloderPath.Text = "F:\\picturesTakeOut\\takeout-20200521T122758Z-001\\Takeout\\Googl";
             // 
             // btnReadFloder
             // 
@@ -102,9 +102,11 @@
             // 
             // rTBInfo
             // 
+            this.rTBInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.rTBInfo.Location = new System.Drawing.Point(33, 104);
             this.rTBInfo.Name = "rTBInfo";
-            this.rTBInfo.Size = new System.Drawing.Size(494, 169);
+            this.rTBInfo.Size = new System.Drawing.Size(734, 169);
             this.rTBInfo.TabIndex = 10;
             this.rTBInfo.Text = "";
             // 

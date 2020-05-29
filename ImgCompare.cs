@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -84,11 +85,57 @@ namespace mingrisoft_3_
 
         private void btnDelectThisFile_Click(object sender, EventArgs e)
         {
+            CheckForIllegalCrossThreadCalls = false;
             rTBInfo.Clear();
-            //循环删除 json
-
+            Thread thread = new Thread(new ThreadStart(ThreadDeleteJSON));
+            thread.Start();
+            
             //getFiles(TBFloderPath.Text,1);
         }
+        void ThreadDeleteJSON()
+        {
+            int jsonDele = 0,picCount=0;
+            //循环删除 json
+            string[] sonForFolder= { "" };
+            string[] sonForGoal = { "" };
+            string[] endsWith = { ".png", ".jpg", ".jpeg", ".bmp" };
+            try
+            {
+                sonForFolder = Directory.GetDirectories(@TBFloderPath.Text.ToString());
+                foreach (string item in sonForFolder)
+                {
+                    DirectoryInfo di;
+                    sonForGoal = Directory.GetFiles(item);
+                    rTBInfo.Text = rTBInfo.Text + "\n进入文件夹 : " + item + ", 子目录长 : " + sonForGoal.Length;
+                    if (sonForGoal.Length == 0)
+                    {
+                        di = new DirectoryInfo(item);
+                        di.Delete(true);
+                        rTBInfo.Text = rTBInfo.Text + "\n删除文件夹 : " + item;
+                    }
+                    foreach (string ite in sonForGoal)
+                    {
+                        rTBInfo.Text = rTBInfo.Text + "\n判断文件 : " + ite;
+                        if (ite.EndsWith(".json"))
+                        {
+                            File.Delete(@ite);
+                            rTBInfo.Text = rTBInfo.Text + "\n删除文件 : " + ite;
+                            jsonDele++;
+                        }
+                        else
+                        {
+                            picCount++;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                LblTip.Text = "失败，请重新选择文件夹";
+            }
+            rTBInfo.Text = rTBInfo.Text + "\n----------\n本次共找出图片:" + picCount + ", 删除json文件：" + jsonDele + "个";
+        }
+
         //使用递归获取照片，返回地址与加密值
         public void getFiles(string pathGet,int i)
         {
