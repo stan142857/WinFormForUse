@@ -104,7 +104,7 @@ namespace mingrisoft_3_
             //循环删除 json
             string[] sonForFolder= { "" };
             string[] sonForGoal = { "" };
-            string[] endsWith = { ".png", ".jpg", ".jpeg", ".bmp" };
+            string[] endsWith = { ".png", ".jpg", ".jpeg", ".bmp",",JPG" };
             DirectoryInfo di,diMoveto;
             try
             {
@@ -136,7 +136,14 @@ namespace mingrisoft_3_
                             string[] iteName = @ite.Split('\\');
                             LblTip.Text = iteName[iteName.Length - 1];
                             diMoveto = new DirectoryInfo(@ite);
-                            diMoveto.MoveTo(@TBAddName.Text.ToString()+"\\"+ iteName[iteName.Length - 1]);
+                            try
+                            {
+                                diMoveto.MoveTo(@TBAddName.Text.ToString() + "\\" + iteName[iteName.Length - 1]);
+                            }
+                            catch (Exception)
+                            {
+                                diMoveto.MoveTo(@TBAddName.Text.ToString() + "\\重复"+picCount+"" + iteName[iteName.Length - 1]);
+                            }
                             rTBInfo.Text = rTBInfo.Text + "\n转移文件 : " + ite;
                         }
                     }
