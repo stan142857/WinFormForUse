@@ -1,15 +1,9 @@
-﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace mingrisoft_3_
@@ -32,6 +26,18 @@ namespace mingrisoft_3_
         /// 获取路径
         /// </summary>
         private void btnReadFloder_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TBFloderPath.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+        /// <summary>
+        /// 将图片转移保存
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSaveFolder_Click(object sender, EventArgs e)
         {
             if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -99,12 +105,12 @@ namespace mingrisoft_3_
             string[] sonForFolder= { "" };
             string[] sonForGoal = { "" };
             string[] endsWith = { ".png", ".jpg", ".jpeg", ".bmp" };
+            DirectoryInfo di,diMoveto;
             try
             {
                 sonForFolder = Directory.GetDirectories(@TBFloderPath.Text.ToString());
                 foreach (string item in sonForFolder)
                 {
-                    DirectoryInfo di;
                     sonForGoal = Directory.GetFiles(item);
                     rTBInfo.Text = rTBInfo.Text + "\n进入文件夹 : " + item + ", 子目录长 : " + sonForGoal.Length;
                     if (sonForGoal.Length == 0)
@@ -122,16 +128,24 @@ namespace mingrisoft_3_
                             rTBInfo.Text = rTBInfo.Text + "\n删除文件 : " + ite;
                             jsonDele++;
                         }
-                        else
+                        else// if(ite.EndsWith(".jpg"))
                         {
+                            //记录已经查找好的图片数目并转移到新文件夹
                             picCount++;
+                            //获取文件名
+                            string[] iteName = @ite.Split('\\');
+                            LblTip.Text = iteName[iteName.Length - 1];
+                            diMoveto = new DirectoryInfo(@ite);
+                            diMoveto.MoveTo(@TBAddName.Text.ToString()+"\\"+ iteName[iteName.Length - 1]);
+                            rTBInfo.Text = rTBInfo.Text + "\n转移文件 : " + ite;
                         }
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                LblTip.Text = "失败，请重新选择文件夹";
+                throw ex;
+                //LblTip.Text = "失败，请重新选择文件夹";
             }
             rTBInfo.Text = rTBInfo.Text + "\n----------\n本次共找出图片:" + picCount + ", 删除json文件：" + jsonDele + "个";
         }

@@ -40,6 +40,7 @@
             this.TBAddName = new System.Windows.Forms.TextBox();
             this.btnSaveRecord = new System.Windows.Forms.Button();
             this.LblTip = new System.Windows.Forms.Label();
+            this.btnSaveFolder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCompare
@@ -76,9 +77,9 @@
             // 
             this.TBFloderPath.Location = new System.Drawing.Point(187, 14);
             this.TBFloderPath.Name = "TBFloderPath";
-            this.TBFloderPath.Size = new System.Drawing.Size(188, 21);
+            this.TBFloderPath.Size = new System.Drawing.Size(340, 21);
             this.TBFloderPath.TabIndex = 6;
-            this.TBFloderPath.Text = "F:\\picturesTakeOut\\takeout-20200521T122758Z-001\\Takeout\\Googl";
+            this.TBFloderPath.Text = "F:\\360MoveData\\TEMP\\Google 相册";
             // 
             // btnReadFloder
             // 
@@ -92,7 +93,7 @@
             // 
             // btnCompareFloder
             // 
-            this.btnCompareFloder.Location = new System.Drawing.Point(397, 14);
+            this.btnCompareFloder.Location = new System.Drawing.Point(535, 14);
             this.btnCompareFloder.Name = "btnCompareFloder";
             this.btnCompareFloder.Size = new System.Drawing.Size(139, 23);
             this.btnCompareFloder.TabIndex = 9;
@@ -112,11 +113,11 @@
             // 
             // btnDelectThisFile
             // 
-            this.btnDelectThisFile.Location = new System.Drawing.Point(33, 47);
+            this.btnDelectThisFile.Location = new System.Drawing.Point(535, 47);
             this.btnDelectThisFile.Name = "btnDelectThisFile";
             this.btnDelectThisFile.Size = new System.Drawing.Size(139, 23);
             this.btnDelectThisFile.TabIndex = 11;
-            this.btnDelectThisFile.Text = "处理开始";
+            this.btnDelectThisFile.Text = "删除+转移 处理开始";
             this.btnDelectThisFile.UseVisualStyleBackColor = true;
             this.btnDelectThisFile.Click += new System.EventHandler(this.btnDelectThisFile_Click);
             // 
@@ -124,8 +125,9 @@
             // 
             this.TBAddName.Location = new System.Drawing.Point(187, 47);
             this.TBAddName.Name = "TBAddName";
-            this.TBAddName.Size = new System.Drawing.Size(188, 21);
+            this.TBAddName.Size = new System.Drawing.Size(340, 21);
             this.TBAddName.TabIndex = 12;
+            this.TBAddName.Text = "F:\\360MoveData\\TEMP\\new";
             // 
             // btnSaveRecord
             // 
@@ -140,17 +142,28 @@
             // LblTip
             // 
             this.LblTip.AutoSize = true;
-            this.LblTip.Location = new System.Drawing.Point(395, 52);
+            this.LblTip.Location = new System.Drawing.Point(533, 71);
             this.LblTip.Name = "LblTip";
             this.LblTip.Size = new System.Drawing.Size(41, 12);
             this.LblTip.TabIndex = 14;
             this.LblTip.Text = "LblTip";
+            // 
+            // btnSaveFolder
+            // 
+            this.btnSaveFolder.Location = new System.Drawing.Point(33, 47);
+            this.btnSaveFolder.Name = "btnSaveFolder";
+            this.btnSaveFolder.Size = new System.Drawing.Size(132, 23);
+            this.btnSaveFolder.TabIndex = 15;
+            this.btnSaveFolder.Text = "选择转移文件夹";
+            this.btnSaveFolder.UseVisualStyleBackColor = true;
+            this.btnSaveFolder.Click += new System.EventHandler(this.btnSaveFolder_Click);
             // 
             // ImgCompare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSaveFolder);
             this.Controls.Add(this.LblTip);
             this.Controls.Add(this.btnSaveRecord);
             this.Controls.Add(this.TBAddName);
@@ -183,5 +196,6 @@
         private System.Windows.Forms.TextBox TBAddName;
         private System.Windows.Forms.Button btnSaveRecord;
         private System.Windows.Forms.Label LblTip;
+        private System.Windows.Forms.Button btnSaveFolder;
     }
 }
