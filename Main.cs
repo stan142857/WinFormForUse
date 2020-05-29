@@ -79,5 +79,12 @@ namespace mingrisoft_3_
             xMLOperate.Show();
             xMLOperate.MdiParent = this;
         }
+
+        private void 对比ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImgCompare imgCompare = new ImgCompare();
+            imgCompare.Show();
+            imgCompare.MdiParent = this;
+        }
     }
 }

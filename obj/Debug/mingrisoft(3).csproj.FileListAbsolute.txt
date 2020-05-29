@@ -22,3 +22,5 @@ C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.EFUseInfo.re
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.BenZhiLunSeven.resources
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.CSVRead.resources
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.Main.resources
+C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.ImgCompare.resources
+C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.XMLOperate.resources

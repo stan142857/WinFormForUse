@@ -106,6 +106,12 @@
     <Compile Include="geneTest.Designer.cs">
       <DependentUpon>geneTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImgCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgCompare.Designer.cs">
+      <DependentUpon>ImgCompare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Info_Account.cs">
       <DependentUpon>db_Info.tt</DependentUpon>
     </Compile>
@@ -184,6 +190,9 @@
     <EmbeddedResource Include="geneTest.resx">
       <DependentUpon>geneTest.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImgCompare.resx">
+      <DependentUpon>ImgCompare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +204,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="stock.resx">
       <DependentUpon>stock.cs</DependentUpon>
@@ -227,6 +237,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="128706.png" />
+    <Content Include="72732.png" />
     <Content Include="db_Info.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>db_Info.Context.cs</LastGenOutput>

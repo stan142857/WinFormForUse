@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.IO;
 
 namespace mingrisoft_3_
 {
@@ -24,7 +26,18 @@ namespace mingrisoft_3_
 
         public void createXML()
         {
-            
+            XmlDocument xmlDocument = new XmlDocument();
+            if (File.Exists("XMLOperate.xml"))
+            {
+                //加载文件
+                xmlDocument.Load("XMLOperate.xml");
+                //获得根节点，为它添加子节点
+                XmlElement xmlElement = xmlDocument.DocumentElement;
+            }
+            else
+            {
+
+            }
         }
     }
 }

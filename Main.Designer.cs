@@ -37,8 +37,10 @@
             this.接口排序泛型ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.本质论ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.溧水测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.xML文档操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
+            this.图片操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.对比ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +64,8 @@
             // 
             // 操作ToolStripMenuItem
             // 
+            this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.图片操作ToolStripMenuItem});
             this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
             this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.操作ToolStripMenuItem.Text = "操作";
@@ -115,6 +119,13 @@
             this.溧水测试ToolStripMenuItem.Text = "溧水测试";
             this.溧水测试ToolStripMenuItem.Click += new System.EventHandler(this.溧水测试ToolStripMenuItem_Click);
             // 
+            // xML文档操作ToolStripMenuItem
+            // 
+            this.xML文档操作ToolStripMenuItem.Name = "xML文档操作ToolStripMenuItem";
+            this.xML文档操作ToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
+            this.xML文档操作ToolStripMenuItem.Text = "XML文档操作";
+            this.xML文档操作ToolStripMenuItem.Click += new System.EventHandler(this.xML文档操作ToolStripMenuItem_Click);
+            // 
             // entityCommand1
             // 
             this.entityCommand1.CommandTimeout = 0;
@@ -123,12 +134,20 @@
             this.entityCommand1.EnablePlanCaching = true;
             this.entityCommand1.Transaction = null;
             // 
-            // xML文档操作ToolStripMenuItem
+            // 图片操作ToolStripMenuItem
             // 
-            this.xML文档操作ToolStripMenuItem.Name = "xML文档操作ToolStripMenuItem";
-            this.xML文档操作ToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
-            this.xML文档操作ToolStripMenuItem.Text = "XML文档操作";
-            this.xML文档操作ToolStripMenuItem.Click += new System.EventHandler(this.xML文档操作ToolStripMenuItem_Click);
+            this.图片操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.对比ToolStripMenuItem});
+            this.图片操作ToolStripMenuItem.Name = "图片操作ToolStripMenuItem";
+            this.图片操作ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.图片操作ToolStripMenuItem.Text = "图片操作";
+            // 
+            // 对比ToolStripMenuItem
+            // 
+            this.对比ToolStripMenuItem.Name = "对比ToolStripMenuItem";
+            this.对比ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.对比ToolStripMenuItem.Text = "对比";
+            this.对比ToolStripMenuItem.Click += new System.EventHandler(this.对比ToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -160,5 +179,7 @@
         private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.ToolStripMenuItem 溧水测试ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xML文档操作ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 图片操作ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 对比ToolStripMenuItem;
     }
 }
