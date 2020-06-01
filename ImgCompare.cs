@@ -100,6 +100,8 @@ namespace mingrisoft_3_
         }
         void ThreadDeleteJSON()
         {
+            rTBInfo.SelectionStart = rTBInfo.TextLength;
+            rTBInfo.ScrollToCaret();
             int jsonDele = 0,picCount=0;
             //循环删除 json
             string[] sonForFolder= { "" };
@@ -126,13 +128,16 @@ namespace mingrisoft_3_
                         {
                             File.Delete(@ite);
                             rTBInfo.Text = rTBInfo.Text + "\n删除文件 : " + ite;
+                            LblTip.Text = ite;
                             jsonDele++;
                         }
                         else// if(ite.EndsWith(".jpg"))
                         {
-                            //记录已经查找好的图片数目并转移到新文件夹
                             picCount++;
+                            //记录已经查找好的图片数目并转移到新文件夹
                             //获取文件名
+                            //使用dimoveto对象
+                            /*
                             string[] iteName = @ite.Split('\\');
                             LblTip.Text = iteName[iteName.Length - 1];
                             diMoveto = new DirectoryInfo(@ite);
@@ -145,6 +150,7 @@ namespace mingrisoft_3_
                                 diMoveto.MoveTo(@TBAddName.Text.ToString() + "\\重复"+picCount+"" + iteName[iteName.Length - 1]);
                             }
                             rTBInfo.Text = rTBInfo.Text + "\n转移文件 : " + ite;
+                            */
                         }
                     }
                 }
@@ -154,7 +160,7 @@ namespace mingrisoft_3_
                 throw ex;
                 //LblTip.Text = "失败，请重新选择文件夹";
             }
-            rTBInfo.Text = rTBInfo.Text + "\n----------\n本次共找出图片:" + picCount + ", 删除json文件：" + jsonDele + "个";
+            LblTip.Text = "找出图片:" + picCount + ", 找出json文件：" + jsonDele + "个";
         }
 
         //使用递归获取照片，返回地址与加密值

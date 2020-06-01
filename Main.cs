@@ -35,9 +35,7 @@ namespace mingrisoft_3_
         {
             try
             {
-                EFUseInfo eFUseInfo = new EFUseInfo();
-                eFUseInfo.Show();
-                eFUseInfo.MdiParent = this;
+
             }
             catch (Exception)
             {

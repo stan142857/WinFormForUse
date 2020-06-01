@@ -38,7 +38,6 @@
             this.本质论ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.溧水测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xML文档操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.图片操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.对比ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -125,15 +124,6 @@
             this.xML文档操作ToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
             this.xML文档操作ToolStripMenuItem.Text = "XML文档操作";
             this.xML文档操作ToolStripMenuItem.Click += new System.EventHandler(this.xML文档操作ToolStripMenuItem_Click);
-            // 
-            // entityCommand1
-            // 
-            this.entityCommand1.CommandTimeout = 0;
-            this.entityCommand1.CommandTree = null;
-            this.entityCommand1.Connection = null;
-            this.entityCommand1.EnablePlanCaching = true;
-            this.entityCommand1.Transaction = null;
-            // 
             // 图片操作ToolStripMenuItem
             // 
             this.图片操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -176,7 +166,6 @@
         private System.Windows.Forms.ToolStripMenuItem 接口排序泛型ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 本质论ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fORM1ToolStripMenuItem;
-        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
         private System.Windows.Forms.ToolStripMenuItem 溧水测试ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xML文档操作ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图片操作ToolStripMenuItem;

@@ -33,12 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="NPlot">
       <HintPath>D:\net\控件\nplot-0.9.10.0\bin\mono\2.0\debug\NPlot.dll</HintPath>
     </Reference>
@@ -72,27 +66,6 @@
     <Compile Include="BenZhiLunSeven.Designer.cs">
       <DependentUpon>BenZhiLunSeven.cs</DependentUpon>
     </Compile>
-    <Compile Include="db_Info.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_Info.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db_Info.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="db_Info.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>db_Info.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="EFUseInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EFUseInfo.Designer.cs">
-      <DependentUpon>EFUseInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Helper\CSVOpeHelper.cs" />
     <Compile Include="CSVRead.cs">
       <SubType>Form</SubType>
@@ -111,9 +84,6 @@
     </Compile>
     <Compile Include="ImgCompare.Designer.cs">
       <DependentUpon>ImgCompare.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info_Account.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -148,41 +118,8 @@
     <Compile Include="XMLOperate.Designer.cs">
       <DependentUpon>XMLOperate.cs</DependentUpon>
     </Compile>
-    <Compile Include="ZYF_JG_GYS.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_JG_YF.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_JG_YFKC.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_JG_YP.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_QT_DD.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_QT_RL.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_QT_TH.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_QT_XX.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_QT_YFPZ.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ZYF_YH.cs">
-      <DependentUpon>db_Info.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BenZhiLunSeven.resx">
       <DependentUpon>BenZhiLunSeven.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EFUseInfo.resx">
-      <DependentUpon>EFUseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CSVRead.resx">
       <DependentUpon>CSVRead.cs</DependentUpon>
@@ -215,13 +152,6 @@
     <EmbeddedResource Include="XMLOperate.resx">
       <DependentUpon>XMLOperate.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="db_Info.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>db_Info.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="db_Info.edmx.diagram">
-      <DependentUpon>db_Info.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -239,16 +169,6 @@
   <ItemGroup>
     <Content Include="128706.png" />
     <Content Include="72732.png" />
-    <Content Include="db_Info.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>db_Info.Context.cs</LastGenOutput>
-      <DependentUpon>db_Info.edmx</DependentUpon>
-    </Content>
-    <Content Include="db_Info.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>db_Info.edmx</DependentUpon>
-      <LastGenOutput>db_Info.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

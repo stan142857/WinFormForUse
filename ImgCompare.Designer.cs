@@ -79,7 +79,6 @@
             this.TBFloderPath.Name = "TBFloderPath";
             this.TBFloderPath.Size = new System.Drawing.Size(340, 21);
             this.TBFloderPath.TabIndex = 6;
-            this.TBFloderPath.Text = "F:\\360MoveData\\TEMP\\Google 相册";
             // 
             // btnReadFloder
             // 
@@ -127,7 +126,6 @@
             this.TBAddName.Name = "TBAddName";
             this.TBAddName.Size = new System.Drawing.Size(340, 21);
             this.TBAddName.TabIndex = 12;
-            this.TBAddName.Text = "F:\\360MoveData\\TEMP\\new";
             // 
             // btnSaveRecord
             // 
