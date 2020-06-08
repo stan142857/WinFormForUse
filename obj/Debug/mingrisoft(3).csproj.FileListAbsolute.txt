@@ -17,3 +17,4 @@ C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.CSVRead.reso
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.Main.resources
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.ImgCompare.resources
 C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft_3_.XMLOperate.resources
+C:\Users\yuanlei\source\repos\mingrisoft(3)\obj\Debug\mingrisoft(3).csprojAssemblyReference.cache

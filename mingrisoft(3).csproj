@@ -79,6 +79,7 @@
     <Compile Include="geneTest.Designer.cs">
       <DependentUpon>geneTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\sqlHelperNeu.cs" />
     <Compile Include="ImgCompare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +91,12 @@
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NeuGet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NeuGet.Designer.cs">
+      <DependentUpon>NeuGet.cs</DependentUpon>
     </Compile>
     <Compile Include="Neusoft_LiShui_Test.cs">
       <SubType>Form</SubType>
