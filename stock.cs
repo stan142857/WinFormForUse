@@ -63,7 +63,7 @@ namespace mingrisoft_3_
                         sp[10].Value = str[12];
                         sp[11].Value = str[13];
                         sp[12].Value = str[14];
-                    }catch(Exception ex)
+                    }catch(Exception)
                     {
                         LblTips.Visible = true;
                         LblTips.Text = "csv文件与数据库格式不符！";
@@ -73,7 +73,7 @@ namespace mingrisoft_3_
                         shr.ExeNoQueryProc("Proc_Insert000826", sp);
                         shr.closeConn();
                     }
-                    catch(Exception ex)
+                    catch(Exception)
                     {
                         continue;
                     }

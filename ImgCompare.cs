@@ -52,8 +52,7 @@ namespace mingrisoft_3_
         private void btnSaveRecord_Click(object sender, EventArgs e)
         {
             rTBInfo.Text = "";//重置富文本控件
-
-
+            
             FileStream fs = new FileStream("D:\\imgRead.txt", FileMode.Append);
             StreamWriter sw = new StreamWriter(fs);
             string write = "";
@@ -107,7 +106,7 @@ namespace mingrisoft_3_
             string[] sonForFolder= { "" };
             string[] sonForGoal = { "" };
             string[] endsWith = { ".png", ".jpg", ".jpeg", ".bmp",",JPG" };
-            DirectoryInfo di,diMoveto;
+            DirectoryInfo di;//,diMoveto;
             try
             {
                 sonForFolder = Directory.GetDirectories(@TBFloderPath.Text.ToString());

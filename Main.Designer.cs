@@ -30,6 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.图片操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.对比ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.股票查看ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.线程测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fORM1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,8 +40,8 @@
             this.本质论ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.溧水测试ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xML文档操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.图片操作ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.对比ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.数据整理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.南京溧水ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,10 +66,26 @@
             // 操作ToolStripMenuItem
             // 
             this.操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.图片操作ToolStripMenuItem});
+            this.图片操作ToolStripMenuItem,
+            this.数据整理ToolStripMenuItem});
             this.操作ToolStripMenuItem.Name = "操作ToolStripMenuItem";
             this.操作ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.操作ToolStripMenuItem.Text = "操作";
+            // 
+            // 图片操作ToolStripMenuItem
+            // 
+            this.图片操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.对比ToolStripMenuItem});
+            this.图片操作ToolStripMenuItem.Name = "图片操作ToolStripMenuItem";
+            this.图片操作ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.图片操作ToolStripMenuItem.Text = "图片操作";
+            // 
+            // 对比ToolStripMenuItem
+            // 
+            this.对比ToolStripMenuItem.Name = "对比ToolStripMenuItem";
+            this.对比ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.对比ToolStripMenuItem.Text = "对比";
+            this.对比ToolStripMenuItem.Click += new System.EventHandler(this.对比ToolStripMenuItem_Click);
             // 
             // 股票查看ToolStripMenuItem
             // 
@@ -124,20 +142,21 @@
             this.xML文档操作ToolStripMenuItem.Size = new System.Drawing.Size(94, 21);
             this.xML文档操作ToolStripMenuItem.Text = "XML文档操作";
             this.xML文档操作ToolStripMenuItem.Click += new System.EventHandler(this.xML文档操作ToolStripMenuItem_Click);
-            // 图片操作ToolStripMenuItem
             // 
-            this.图片操作ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.对比ToolStripMenuItem});
-            this.图片操作ToolStripMenuItem.Name = "图片操作ToolStripMenuItem";
-            this.图片操作ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.图片操作ToolStripMenuItem.Text = "图片操作";
+            // 数据整理ToolStripMenuItem
             // 
-            // 对比ToolStripMenuItem
+            this.数据整理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.南京溧水ToolStripMenuItem});
+            this.数据整理ToolStripMenuItem.Name = "数据整理ToolStripMenuItem";
+            this.数据整理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.数据整理ToolStripMenuItem.Text = "数据整理";
             // 
-            this.对比ToolStripMenuItem.Name = "对比ToolStripMenuItem";
-            this.对比ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.对比ToolStripMenuItem.Text = "对比";
-            this.对比ToolStripMenuItem.Click += new System.EventHandler(this.对比ToolStripMenuItem_Click);
+            // 南京溧水ToolStripMenuItem
+            // 
+            this.南京溧水ToolStripMenuItem.Name = "南京溧水ToolStripMenuItem";
+            this.南京溧水ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.南京溧水ToolStripMenuItem.Text = "南京溧水";
+            this.南京溧水ToolStripMenuItem.Click += new System.EventHandler(this.南京溧水ToolStripMenuItem_Click);
             // 
             // Main
             // 
@@ -170,5 +189,7 @@
         private System.Windows.Forms.ToolStripMenuItem xML文档操作ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图片操作ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 对比ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 数据整理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 南京溧水ToolStripMenuItem;
     }
 }

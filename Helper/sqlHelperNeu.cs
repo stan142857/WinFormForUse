@@ -10,7 +10,7 @@ namespace mingrisoft_3_.Helper
 {
     class sqlHelperNeu
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-9H2IJLA\MSSQLDEVELOP17;User ID=NeuDBA;Password=********;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-9H2IJLA\MSSQLDEVELOP17;User ID=NeuDBA;Password=NeuDBA;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         SqlDataReader sdr;
         public sqlHelperNeu()
         {
@@ -56,9 +56,9 @@ namespace mingrisoft_3_.Helper
                 cmd.ExecuteNonQuery();
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
-                throw ex;
+                //throw ex;
                 return false;
             }
             return true;

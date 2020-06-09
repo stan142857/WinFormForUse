@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using mingrisoft_3_.Helper;
 
 namespace mingrisoft_3_
 {
@@ -13,18 +14,16 @@ namespace mingrisoft_3_
     {
         public static void TableValuedToDB(DataTable dt)
         {
-            SqlHelper shr = new SqlHelper();
+            sqlHelperNeu shr = new sqlHelperNeu();
             //接口
             const string TSqlStatement =
-             "insert into Basis(Id,description)" +
-             " SELECT nc.Id,nc.description" +
-             " FROM @NewBulkTestTvp AS nc";
+             "insert into NeuNanJingLiShui(TABLE_NAME,TABLE_TYPE,COMMENTS_tab,COLUMN_NAME,COMMENTS_col)" +
+             " SELECT nc.TABLE_NAME,nc.TABLE_TYPE,nc.COMMENTS_tab,nc.COLUMN_NAME,nc.COMMENTS_col" +
+             " FROM @NewNeuNanJingLiShui AS nc";
             SqlCommand cmd = new SqlCommand(TSqlStatement, shr.getConn());
-            SqlParameter catParam = cmd.Parameters.AddWithValue("@NewBulkTestTvp", dt);
+            SqlParameter catParam = cmd.Parameters.AddWithValue("@NewNeuNanJingLiShui", dt);
             catParam.SqlDbType = SqlDbType.Structured;
-            //表值参数的名字叫Basis，如下  
-            //CREATE TYPE Basis AS TABLE (Id int,description varchar)
-            catParam.TypeName = "Basis";
+            catParam.TypeName = "dbo.NeuNanJingLiShuiTVPs";
             try
             {
                 shr.getConn().Open();
@@ -45,14 +44,11 @@ namespace mingrisoft_3_
         }
         public static DataTable OpenCSV(string filePath)
         {
-            Encoding encoding = Encoding.GetEncoding("utf-8"); //Encoding.ASCII;//
+            Encoding encoding = Encoding.GetEncoding("uft-8"); //Encoding.ASCII;//
             DataTable dt = new DataTable();
             FileStream fs = new FileStream(filePath, System.IO.FileMode.Open, System.IO.FileAccess.Read);
-
-            //StreamReader sr = new StreamReader(fs, Encoding.UTF8);
+            
             StreamReader sr = new StreamReader(fs, encoding);
-            //string fileContent = sr.ReadToEnd();
-            //encoding = sr.CurrentEncoding;
             //记录每次读取的一行记录
             string strLine = "";
             //记录每行记录中的各字段内容
@@ -63,6 +59,8 @@ namespace mingrisoft_3_
             //标示是否是读取的第一行
             bool IsFirst = true;
             //逐行读取CSV中的数据
+            DataColumn dc;
+            //获取行数据
             while ((strLine = sr.ReadLine()) != null)
             {
                 if (IsFirst == true)
@@ -73,7 +71,7 @@ namespace mingrisoft_3_
                     //创建列
                     for (int i = 0; i < columnCount; i++)
                     {
-                        DataColumn dc = new DataColumn(tableHead[i]);
+                        dc = new DataColumn(tableHead[i]);
                         dt.Columns.Add(dc);
                     }
                 }

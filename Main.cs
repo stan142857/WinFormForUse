@@ -84,5 +84,12 @@ namespace mingrisoft_3_
             imgCompare.Show();
             imgCompare.MdiParent = this;
         }
+
+        private void 南京溧水ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NeuGet neuGet = new NeuGet();
+            neuGet.Show();
+            neuGet.MdiParent = this;
+        }
     }
 }

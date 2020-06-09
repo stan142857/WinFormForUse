@@ -55,9 +55,9 @@ public class SqlHelper
             cmd.ExecuteNonQuery();
 
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            throw ex;
+            //throw ex;
             return false;
         }
         return true;
