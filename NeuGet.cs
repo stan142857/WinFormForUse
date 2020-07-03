@@ -76,15 +76,7 @@ namespace mingrisoft_3_
             {
                 if (skipOne > 0)
                 {
-                    string[] str = strLine.Split(new string[] { "," }, StringSplitOptions.RemoveEmptyEntries);
-                    //数组不足五个列时，添加null作为选项 或者 空值传输
-                    if (str.Length < 4)
-                    {
-                        for(int j = 0; j < 4 - str.Length; j++)
-                        {
-                            str[4 - j] = "null";
-                        }
-                    }
+                    string[] str = strLine.Split(new char[] { ',' }); //, StringSplitOptions.RemoveEmptyEntries
                     SqlParameter[] sp =
                     {
                     new SqlParameter("@TABLE_NAME",SqlDbType.NVarChar),
@@ -95,11 +87,18 @@ namespace mingrisoft_3_
                     };
                     try
                     {
-                        sp[0].Value = str[0].Trim(ch);
-                        sp[1].Value = str[1].Trim(ch);
-                        sp[2].Value = str[2].Trim(ch);
-                        sp[3].Value = str[3].Trim(ch);
-                        sp[4].Value = str[4].Trim(ch);
+                        for(int i = 0; i < 5; i++)
+                        {
+                            if (str[i]==null||str[i]=="")
+                            {
+                                LblTips.Text = "错误点：" + strLine + "-*-\n";
+                                sp[i].Value = "0";
+                            }
+                            else
+                            {
+                                sp[i].Value = str[i];
+                            }
+                        }
                     }
                     catch (Exception)
                     { 
@@ -112,15 +111,13 @@ namespace mingrisoft_3_
                         countSucc++;
                         shr.ExeNoQueryProc("Proc_InsertDBA", sp);
                         shr.closeConn();
-                        LblTips.Visible = true;
-                        LblTips.Text = "第" + countSucc + "条录入成功！";
+                        richTextBox3.Text = "第" + countSucc + "条录入成功！"; ;
                     }
                     catch (Exception)
                     {
                         countFail++;
-                        LblTips.Visible = true;
-                        LblTips.Text = "第" + countFail + "条录入失败！开始下一条";
-                        richTextBox1.Text = richTextBox1.Text + "路径："+fileDialog +"录入有误---：" + strLine +"--" +str[str.Length] + "\n" ;
+                        richTextBox2.Text = "第" + countFail + "条录入失败！开始下一条";
+                        richTextBox1.Text = richTextBox1.Text + "路径："+fileDialog +"录入有误---：" + strLine  + "\n" ;
                         continue;
                     }
                 }
@@ -128,5 +125,13 @@ namespace mingrisoft_3_
             }
         }
         #endregion
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            string sql = "delete from NeuNanJingLiShui";
+            sqlHelperNeu shn = new sqlHelperNeu();
+            shn.ExeNonQuery(sql);
+            shn.closeConn();
+        }
     }
 }

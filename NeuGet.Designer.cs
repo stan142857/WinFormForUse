@@ -33,6 +33,9 @@
             this.LblTips = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // btnCSVInsert
@@ -68,11 +71,40 @@
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(41, 334);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 4;
+            this.btnClear.Text = "格式化数据库";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(150, 310);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(187, 47);
+            this.richTextBox2.TabIndex = 5;
+            this.richTextBox2.Text = "";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(343, 310);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(200, 47);
+            this.richTextBox3.TabIndex = 6;
+            this.richTextBox3.Text = "";
+            // 
             // NeuGet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.richTextBox3);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.LblTips);
             this.Controls.Add(this.btnCSVInsert);
@@ -90,5 +122,8 @@
         private System.Windows.Forms.Label LblTips;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox3;
     }
 }
