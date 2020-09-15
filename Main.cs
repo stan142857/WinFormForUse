@@ -91,5 +91,10 @@ namespace mingrisoft_3_
             neuGet.Show();
             neuGet.MdiParent = this;
         }
+
+        private void 操作ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
